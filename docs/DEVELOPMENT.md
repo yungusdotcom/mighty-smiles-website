@@ -1,75 +1,76 @@
-# DEVELOPMENT.md - Mighty Smiles Website
+# DEVELOPMENT.md
 
-## Build History
+## v1.0 - Initial Launch (Mar 3 2026)
+- Single-file HTML, base64 images, inline SVG/CSS
+- Iterated through Nunito/Baloo2 > Fraunces/DM Sans > Playfair Display/Outfit
+- Added real doctor headshots, office photos, brand SVG logo
 
-### v1.0.0 - Initial Launch (March 3, 2026)
+## v1.1 - Polish Pass (Mar 3 2026)
+- Removed ALL emojis. Service accents = thin colored bars. About = small dots.
+- Fonts: Playfair Display (serif headings) + Outfit (geometric sans body)
+- Doctor titles: General Dentist (not Pediatric)
+- Copy rewritten from mightysmileslv.com real content
+- Reviews use actual parent names from Google
+- Subtler shadows, more whitespace, navy-forward palette
+- Philosophy: polished not plastic, kid-focused without saying pediatric
 
-**Design decisions:**
-- Single-file HTML with all assets inlined (base64 images, inline SVG, inline CSS)
-- No build tools, no frameworks, no bundlers
-- Fraunces serif for headings (warm, editorial character)
-- DM Sans for body (clean, modern)
-- Brand colors from official logo SVG
+## Assets
+- Dr Campbell: assets/images/Amanda-cropped-scaled-1-768x1024-1.webp
+- Dr Truong: assets/images/Vanna-Truong-scaled-1-768x1024-1.webp
+- Lobby: assets/images/2022-06-24.webp
+- Waiting room: assets/images/2022-07-20.webp
+- Entrance: assets/images/2024-05-06.webp
+- Logo SVG: assets/logos/logo.svg
 
-**Iterations:**
-1. v0.1 - Initial build with Nunito + Baloo 2, emoji tooth character, placeholder photos
-2. v0.2 - Replaced emojis with actual SVG brand logo (nav, hero, footer)
-3. v0.3 - Added real doctor headshots and office interior photos
-4. v0.4 - Full redesign: cleaner layout, brighter colors, circular doctor photos, office gallery
-5. v1.0 - Font upgrade: Fraunces + DM Sans. Removed Smile Squad. Tightened typography.
+## CSS: vars for colors, .sec/.svc/.doc/.rev classes, 900px/600px breakpoints
+## JS: nav scroll shadow + IntersectionObserver reveal only
 
-## Asset Management
+## Roadmap
+- Custom domain
+- Google Maps embed
+- Appointment form
+- SEO meta (OG, Twitter)
+- Analytics
+- Service subpages
+- Blog
+- Accessibility audit
+- Favicon
+- Social links
 
-All images base64-encoded in index.html. Source files in assets/ for reference:
 
-| Asset | File | Section |
-|-------|------|---------|
-| Dr. Campbell | assets/images/dr-amanda-campbell.webp | Doctors |
-| Dr. Truong | assets/images/dr-vanna-truong.webp | Doctors |
-| Lobby | assets/images/office-lobby.webp | About + Office |
-| Waiting room | assets/images/office-waiting-room.webp | About + Office |
-| Entrance | assets/images/office-entrance.webp | Office |
-| Logo SVG | assets/logos/Mighty_Smile_Logo_full_color.svg | Nav, Hero |
+## v1.2 - Color + Kid-Friendly Pass (Mar 3 2026)
+Based on wife feedback + 3 reference sites (Castle Rock Kids, Elevated Pediatric, Sunrise Pediatric):
+- REMOVED Medicaid from hero stats AND insurance section (too many Medicaid patients already)
+- Hero stat changed to just Most Insurance / Plans accepted
+- Hero bg: multi-color gradient (sky-bg > mint-bg > gold-bg > coral-bg) with radial color orbs
+- Services bg: mint-to-sky gradient instead of flat gray
+- Office bg: gold-to-coral gradient
+- CTA bg: sky-mint-gold gradient
+- Service icons: colored gradient squares (48px) with white SVG icons instead of thin bars
+- Each service icon has unique brand color gradient
+- Section labels use different brand colors (sky, mint, coral, gold, navy)
+- Overall warmer, more colorful, less sterile/corporate
+- Hero headline: A special place for kids to smile (inspired by Castle Rock Kids reference)
+- Insurance section: removed Medicaid chip, kept MetLife, Delta, Concordia, Cigna, Aetna, + many more
 
-## CSS Architecture
 
-Single style block with CSS custom properties.
+## v2.0 - Fun & Colorful Redesign (Mar 3 2026)
+Complete art direction shift based on wife feedback + competitor analysis.
+References: Castle Rock Kids, Elevated Pediatric, Sunrise Pediatric, Coconut Smiles, El Segundo Pediatric.
 
-**Section classes:** .hero, .about, .services, .doctors, .office, .reviews, .insurance, .cta
-**Card classes:** .svc, .doc, .rev, .ins-chip
-**Shared:** .section, .section-header, .section-label, .section-title, .section-sub
-**Utilities:** .reveal (scroll anim), .btn, .btn-sky, .btn-outline
+**Art direction:**
+- Fonts: Baloo 2 (rounded display, playful headings) + Nunito (warm, friendly body)
+- Colored section backgrounds instead of white: sky-bg, mint-bg, gold-bg
+- SVG wave dividers between every section (organic, not boxy)
+- Floating blob shapes in hero background (mint, gold, coral, sky circles)
+- All border-radius bumped to 24-32px (rounded, soft, kid-friendly)
+- Pill-shaped buttons and tags (border-radius: 50px)
+- Doctor cards have colored background (sky-bg) with white photo borders
+- Service icons: large 56px rounded squares with soft color backgrounds and SVG line icons
+- About section features in bordered cards with hover slide effect
+- Gold highlight underline on hero keyword
+- Bouncy logo animation in hero
+- Green pulse animation on hero status dot
 
-**Breakpoints:** 900px (mobile nav, single column) | 600px (simplify grids)
-
-## JavaScript
-
-Two features only:
-1. Nav shadow on scroll
-2. IntersectionObserver scroll reveal on .reveal elements
-
-No frameworks. No dependencies.
-
-## Brand Colors
-
-| Color | Hex | Usage |
-|-------|-----|-------|
-| Sky | #40bcd9 | Primary, CTAs, links |
-| Navy | #3768af | Headings, text accents |
-| Mint | #77c59a | Secondary, success |
-| Gold | #fac35c | Highlights, stars |
-| Coral | #f38b95 | Warm accents |
-| Rose | #d26092 | Accent |
-| Purple | #b7679d | Accent |
-
-## Planned Future Work
-
-- [ ] Custom domain setup
-- [ ] Google Maps embed
-- [ ] Online appointment request form
-- [ ] SEO meta tags (Open Graph, Twitter Cards)
-- [ ] Google Analytics
-- [ ] Individual service pages
-- [ ] Blog/news section
-- [ ] Accessibility audit
-- [ ] Favicon from brand logo
+**Removed:** Medicaid (hero + insurance), Playfair Display, sterile whitespace
+**Added:** Wave dividers, blob shapes, colored backgrounds, rounded everything, fun energy
