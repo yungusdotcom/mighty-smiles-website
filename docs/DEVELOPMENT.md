@@ -74,3 +74,27 @@ References: Castle Rock Kids, Elevated Pediatric, Sunrise Pediatric, Coconut Smi
 
 **Removed:** Medicaid (hero + insurance), Playfair Display, sterile whitespace
 **Added:** Wave dividers, blob shapes, colored backgrounds, rounded everything, fun energy
+
+
+## v2.1 - Rainbow Logo Energy (Mar 3 2026)
+The DENTISTRY letters in the logo use rainbow colors: green, sky, purple, gold, rose, coral.
+That rainbow gradient now drives the entire site identity.
+
+**Rainbow treatment:**
+- Nav: 5px rainbow gradient bar across top of page (always visible)
+- Hero: 'Special' in rainbow gradient text, 'Kids' with gold highlight underline
+- Section headings: key words in rainbow gradient text throughout
+- CTA card: rainbow gradient top bar
+- Insurance chips: each chip is a different brand color on matching pastel bg
+- CSS var --rainbow used globally
+
+**Visual energy:**
+- Hero bg: large blurred color blobs (green, gold, coral, purple) creating painterly effect
+- Wiggly logo animation with rotation
+- Doctor cards: rainbow gradient background (sky > mint > gold)
+- Service icons: solid color circles with white emoji icons (48px)
+- Service cards: icon + title in horizontal layout (more dynamic)
+- About features: 2x2 grid of colorful icon cards
+- Every section has strong background color: sky-bg, mint-bg, gold-bg
+
+**Philosophy shift:** Stop designing a dental website. Design a KIDS place that happens to do dentistry.
